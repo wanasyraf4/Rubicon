@@ -13,6 +13,7 @@ folium==0.14.0
 itsdangerous==2.0.1
 Jinja2==3.0.3
 MarkupSafe==2.0.1
+numpy==1.24.0
 plotly==5.5.0
 pandas==1.5.2
 six==1.16.0
