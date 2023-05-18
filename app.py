@@ -154,10 +154,15 @@ fig_disease = go.Figure(go.Indicator(
 # fig_disease.show()
 
 
+
 # ============================== front end area ======================
 
 app = dash.Dash(__name__)
+#Initiate the app 
+server = app.server
+app.title=tabtitle
 
+#layout
 app.layout = html.Div([
     html.Div([
         html.Img(src="/assets/logo.png", style={'height':'150px', 'display': 'block', 'margin': 'auto'}),
