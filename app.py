@@ -160,7 +160,7 @@ fig_disease = go.Figure(go.Indicator(
 app = dash.Dash(__name__)
 #Initiate the app 
 server = app.server
-app.title=tabtitle
+
 
 #layout
 app.layout = html.Div([
