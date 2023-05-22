@@ -174,6 +174,9 @@ app.layout = html.Div([
     ]),
     html.Iframe(srcDoc=open("map.html", "r").read(), width="100%", height="600"),
     html.Div([
+        html.Img(src='/assets/colorbar.png', style={'height':'80px', 'width':'55%', 'display': 'block', 'margin': 'auto'})
+    ]),
+    html.Div([
         dcc.Graph(figure=fig_area, style={"width": "50%", "display": "inline-block"}),
         dcc.Graph(figure=fig_line, style={"width": "50%", "display": "inline-block"})
     ]),
