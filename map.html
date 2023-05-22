@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_77a276e99f359e787688677989c8233a {
+                #map_5a72026e867ae31d724328286e01377f {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -39,18 +39,18 @@
 <body>
     
     
-            <div class="folium-map" id="map_77a276e99f359e787688677989c8233a" ></div>
+            <div class="folium-map" id="map_5a72026e867ae31d724328286e01377f" ></div>
         
 </body>
 <script>
     
     
-            var map_77a276e99f359e787688677989c8233a = L.map(
-                "map_77a276e99f359e787688677989c8233a",
+            var map_5a72026e867ae31d724328286e01377f = L.map(
+                "map_5a72026e867ae31d724328286e01377f",
                 {
                     center: [6.332517055724515, 100.67868801025419],
                     crs: L.CRS.EPSG3857,
-                    zoom: 12,
+                    zoom: 15,
                     zoomControl: true,
                     preferCanvas: false,
                 }
@@ -60,31 +60,31 @@
 
         
     
-            var tile_layer_8791c49de982ecd2ec78ae8b20e5d240 = L.tileLayer(
+            var tile_layer_157dc2d9edb8b620e505fe0dccadf243 = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_77a276e99f359e787688677989c8233a);
+            ).addTo(map_5a72026e867ae31d724328286e01377f);
         
     
-            var tile_layer_35a5ee5d5d5dedc749eaebeb38148d89 = L.tileLayer(
-                "https://earthengine.googleapis.com/v1alpha/projects/earthengine-legacy/maps/91bc1c56dd43a905bdace782f4c454a5-386daa5e8ef0c8a2b0c83e27c90fc5fb/tiles/{z}/{x}/{y}",
+            var tile_layer_a483148925edca2f1fac7222d57a22f2 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1alpha/projects/earthengine-legacy/maps/91bc1c56dd43a905bdace782f4c454a5-032c575bf98866ddef89b96faeb776b8/tiles/{z}/{x}/{y}",
                 {"attribution": "Map Data \u0026copy; \u003ca href=\"https://earthengine.google.com/\"\u003eGoogle Earth Engine\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_77a276e99f359e787688677989c8233a);
+            ).addTo(map_5a72026e867ae31d724328286e01377f);
         
     
-            var layer_control_052bc1d3ebe9a8ee277d6dae46a7e516 = {
+            var layer_control_e995b86098977c23dc91acb152186dc9 = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_8791c49de982ecd2ec78ae8b20e5d240,
+                    "openstreetmap" : tile_layer_157dc2d9edb8b620e505fe0dccadf243,
                 },
                 overlays :  {
-                    "Chl absorption max., biogeochemistry, vegetation" : tile_layer_35a5ee5d5d5dedc749eaebeb38148d89,
+                    "Chl absorption max., biogeochemistry, vegetation" : tile_layer_a483148925edca2f1fac7222d57a22f2,
                 },
             };
             L.control.layers(
-                layer_control_052bc1d3ebe9a8ee277d6dae46a7e516.base_layers,
-                layer_control_052bc1d3ebe9a8ee277d6dae46a7e516.overlays,
+                layer_control_e995b86098977c23dc91acb152186dc9.base_layers,
+                layer_control_e995b86098977c23dc91acb152186dc9.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_77a276e99f359e787688677989c8233a);
+            ).addTo(map_5a72026e867ae31d724328286e01377f);
         
 </script>
 </html>
