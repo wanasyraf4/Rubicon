@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_48472ae59a682bbe8fdb4220f8450bac {
+                #map_77a276e99f359e787688677989c8233a {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -39,14 +39,14 @@
 <body>
     
     
-            <div class="folium-map" id="map_48472ae59a682bbe8fdb4220f8450bac" ></div>
+            <div class="folium-map" id="map_77a276e99f359e787688677989c8233a" ></div>
         
 </body>
 <script>
     
     
-            var map_48472ae59a682bbe8fdb4220f8450bac = L.map(
-                "map_48472ae59a682bbe8fdb4220f8450bac",
+            var map_77a276e99f359e787688677989c8233a = L.map(
+                "map_77a276e99f359e787688677989c8233a",
                 {
                     center: [6.332517055724515, 100.67868801025419],
                     crs: L.CRS.EPSG3857,
@@ -60,31 +60,31 @@
 
         
     
-            var tile_layer_a4f79dcda8b299cea92da1bdaf5633f7 = L.tileLayer(
+            var tile_layer_8791c49de982ecd2ec78ae8b20e5d240 = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_48472ae59a682bbe8fdb4220f8450bac);
+            ).addTo(map_77a276e99f359e787688677989c8233a);
         
     
-            var tile_layer_d631d4c8378802f829d1e637a4e1212b = L.tileLayer(
-                "https://earthengine.googleapis.com/v1alpha/projects/earthengine-legacy/maps/5dfd74544c27e8fcea51c1d5bc7cabf9-282616d2c7babf3b48ad62c1455fe6d8/tiles/{z}/{x}/{y}",
+            var tile_layer_35a5ee5d5d5dedc749eaebeb38148d89 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1alpha/projects/earthengine-legacy/maps/91bc1c56dd43a905bdace782f4c454a5-386daa5e8ef0c8a2b0c83e27c90fc5fb/tiles/{z}/{x}/{y}",
                 {"attribution": "Map Data \u0026copy; \u003ca href=\"https://earthengine.google.com/\"\u003eGoogle Earth Engine\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_48472ae59a682bbe8fdb4220f8450bac);
+            ).addTo(map_77a276e99f359e787688677989c8233a);
         
     
-            var layer_control_2587e491af471d1fbeb4f944015912d8 = {
+            var layer_control_052bc1d3ebe9a8ee277d6dae46a7e516 = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_a4f79dcda8b299cea92da1bdaf5633f7,
+                    "openstreetmap" : tile_layer_8791c49de982ecd2ec78ae8b20e5d240,
                 },
                 overlays :  {
-                    "Chl absorption max., biogeochemistry, vegetation" : tile_layer_d631d4c8378802f829d1e637a4e1212b,
+                    "Chl absorption max., biogeochemistry, vegetation" : tile_layer_35a5ee5d5d5dedc749eaebeb38148d89,
                 },
             };
             L.control.layers(
-                layer_control_2587e491af471d1fbeb4f944015912d8.base_layers,
-                layer_control_2587e491af471d1fbeb4f944015912d8.overlays,
+                layer_control_052bc1d3ebe9a8ee277d6dae46a7e516.base_layers,
+                layer_control_052bc1d3ebe9a8ee277d6dae46a7e516.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_48472ae59a682bbe8fdb4220f8450bac);
+            ).addTo(map_77a276e99f359e787688677989c8233a);
         
 </script>
 </html>
