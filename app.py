@@ -17,6 +17,71 @@ NDVI12 = np.genfromtxt("NDVI12.csv", delimiter=",")
 NDVI_value = np.genfromtxt("NDVI_value.csv", delimiter=",")
 EVI_value = np.genfromtxt("EVI_value.csv", delimiter=",")
 
+
+
+# =================== chart area for disease type =====================
+
+
+# Define your data
+labels = ['South American Leaf Blight (SALB)',
+          'Corynespora leaf fall',
+          'Anthracnose(PSD)']
+values = [6, 4, 2]
+
+# Create the donut plot
+figDType = go.Figure(data=[go.Pie(labels=labels, values=values, hole=.3,
+                             textinfo='label+percent+value',
+                             insidetextorientation='radial',
+                             textposition='outside')])
+
+# Add a title
+figDType.update_layout(
+    annotations=[dict(text='Disease <br> Type', x=0.5, y=0.5, font_size=15, showarrow=False)],
+    showlegend=False,
+    title_text="Disease Distribution"
+)
+
+# fig.show()
+
+
+# ================ disease severity ===========================
+
+# Define your data
+diseases = ['South American Leaf Blight (SALB)', 'Corynespora leaf fall', 'Anthracnose(PSD)']
+severity_stages = [1, 2, 3, 4, 5]
+reports = [[3, 2, 1, 0, 0], [3, 1, 0, 0, 0], [1, 1, 0, 0, 0]]  # number of reports for each disease at each severity stage
+
+# Create a trace for each disease
+traces = []
+for i, disease in enumerate(diseases):
+    traces.append(go.Scatter(
+        x=[disease]*len(severity_stages),  # repeat the disease name for each severity stage
+        y=severity_stages,  # severity stages
+        mode='markers',
+        marker=dict(
+            size=reports[i],  # size of bubbles based on number of reports
+            sizemode='area',  # size represents area of bubble
+            sizeref=2.*max(reports[i])/(40.**2),  # scale the size of the bubbles
+            sizemin=4  # minimum size so bubbles are visible even for small number of reports
+        ),
+        name=disease  # name of the traces/diseases
+    ))
+
+# Create the bubble plot
+fig_sev = go.Figure(data=traces)
+
+# Set title and labels
+fig_sev.update_layout(
+    title='Disease Severity',
+    xaxis_title='Disease',
+    yaxis_title='Severity Stage',
+    showlegend=False
+)
+
+# fig.show()
+
+
+
 # ==================== fig line ==============================================
 
 # NDVIs data
