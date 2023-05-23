@@ -227,7 +227,6 @@ app = dash.Dash(__name__)
 server = app.server
 
 
-#layout
 app.layout = html.Div([
     html.Div([
         html.Img(src="/assets/logo.png", style={'height':'150px', 'display': 'block', 'margin': 'auto'}),
@@ -237,19 +236,30 @@ app.layout = html.Div([
         html.Br(),
         html.H1("Precision Plantation Data Story", style={'text-align': 'center'})
     ]),
+    
     html.Iframe(srcDoc=open("map.html", "r").read(), width="100%", height="600"),
     html.Div([
         html.Img(src='/assets/colorbar.png', style={'height':'80px', 'width':'55%', 'display': 'block', 'margin': 'auto'})
     ]),
+    
+    html.Div([
+        dcc.Graph(figure=fig_disease, style={"width": "50%", "display": "inline-block"}),
+        dcc.Graph(figure=figDType, style={"width": "50%", "display": "inline-block"})
+    ]),
+    
+    
+    html.Div([
+        dcc.Graph(figure=V, style={"width": "50%", "display": "inline-block"}),
+        dcc.Graph(figure=fig_sev, style={"width": "50%", "display": "inline-block"})
+    ]),
+    
     html.Div([
         dcc.Graph(figure=fig_area, style={"width": "50%", "display": "inline-block"}),
         dcc.Graph(figure=fig_line, style={"width": "50%", "display": "inline-block"})
+        
     ]),
-    html.Div([
-        dcc.Graph(figure=V, style={"width": "50%", "display": "inline-block"}),
-        dcc.Graph(figure=fig_disease, style={"width": "50%", "display": "inline-block"})
-    ])
 ])
+
 
 
 
